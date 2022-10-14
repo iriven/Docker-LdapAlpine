@@ -4,3 +4,4 @@
 *.proc
 *.sh
 !entrypoint.sh
+*.gitignore
