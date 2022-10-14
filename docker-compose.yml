@@ -7,8 +7,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 10389:389
-      - 10636:636
+      - 389:389
+      - 636:636
     volumes:
       - openldap_data:/var/lib/openldap/openldap-data
       - openldap_config:/etc/openldap
