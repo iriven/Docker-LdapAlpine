@@ -13,7 +13,7 @@ services:
       - openldap_data:/var/lib/openldap/openldap-data
       - openldap_config:/etc/openldap
     env_file:
-      - ./ldap.env
+      - ./slapd.env
 volumes:
   openldap_data:
   openldap_config:
