@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  openldap:
+    container_name: ldapserver
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 10389:389
+      - 10636:636
+    volumes:
+      - openldap_data:/var/lib/openldap/openldap-data
+      - openldap_config:/etc/openldap
+    env_file:
+      - ./ldap.env
+volumes:
+  openldap_data:
+  openldap_config:
